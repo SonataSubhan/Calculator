@@ -1,30 +1,62 @@
+* {}
+
 body {
-    background-color: #CD5C5C;
+    background: linear-gradient(#614385, #516395);
 }
 
 .container {
     width: 250px;
     height: 500px;
-    background-color: white;
+    background-color: rgb(223, 213, 213);
     margin: auto;
     border-radius: 10px;
     margin-top: 50px;
     padding: 10px;
+    box-shadow: 5px 5px 5px 5px #b897ba;
 }
 
 .main {
-    background-color: rgb(63, 160, 160);
+    background-color: rgb(57, 59, 59);
+    border-radius: 20px;
     width: 100%;
     height: 30%;
+    color: white;
+
+
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.display {
+    border: none;
+    background: none;
+    text-align: right;
+    color: #D8BFD8;
+    position: relative;
+    font-size: 2rem;
+    width: 98%;
+    height: 40px;
+    border-radius: 40px;
+    top: 110px;
+
 }
 
 .section {
-
+    background-color: rgb(184, 186, 186);
     width: 100%;
     height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
 }
 
 .buttons {
@@ -34,6 +66,8 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
+
+
 }
 
 .equal {
@@ -43,6 +77,9 @@ body {
     cursor: pointer;
     border: none;
     background: none;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    box-shadow: 2px 5px #b897ba;
 }
 
 .AC {
@@ -53,17 +90,48 @@ body {
     border: none;
     background: none;
 
+    border-radius: 5px;
+    transition-duration: 0.3s;
+    box-shadow: 2px 5px #b897ba;
+
 }
 
-.square {
+.AC:hover {
+    background-color: rgb(141, 103, 54);
+}
+
+.equal:hover {
+    background-color: rgb(141, 103, 54);
+}
+
+.square.number {
     width: 57px;
     height: 57px;
     border: none;
     text-decoration: none;
-    background-color: rgb(163, 165, 166);
+    background-color: #D8BFD8;
     cursor: pointer;
     font-size: 20px;
     border-radius: 7px;
+    transition-duration: 0.3s;
+    box-shadow: 2px 5px #b897ba;
+}
+
+.square.number.del {
+    background-color: #ad70ae;
+}
+
+.square:active {
+
+    transform: translateY(4px);
+}
+
+.AC:active {
+    transform: translateY(4px);
+}
+
+.equal:active {
+    transform: translateY(4px);
 }
 
 .rectangle {
@@ -73,8 +141,39 @@ body {
     cursor: pointer;
     font-size: 20px;
     border-radius: 7px;
-    background-color: rgb(163, 165, 166);
+    background-color: #d8bfd8;
+    transition-duration: 0.3s;
+    box-shadow: 2px 5px #b897ba;
 }
+
+.square.operator {
+    width: 57px;
+    height: 57px;
+    border: none;
+    text-decoration: none;
+    background-color: #2397c4;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 7px;
+    transition-duration: 0.3s;
+    box-shadow: 2px 5px #707072;
+}
+
+
+
+.square.number:hover {
+    background-color: #c05bc7;
+}
+
+.square.operator:hover {
+    background-color: #0c5590;
+}
+
+.rectangle:hover {
+    background-color: #c05bc7;
+}
+
+
 
 .header {
     background-color: rgb(216, 214, 214);
@@ -83,15 +182,16 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
 }
 
 .switch {
-    position: absolute;
+    position: relative;
     display: inline-block;
     width: 40px;
     height: 20px;
-    margin-right: 8px;
+    margin-left: -30px;
+
 }
 
 .switch input {
@@ -107,7 +207,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #343030;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -125,7 +225,8 @@ body {
 }
 
 input:checked+.slider {
-    background-color: #CD5C5C;
+    background-color: #d8bfd8;
+
 }
 
 input:focus+.slider {
