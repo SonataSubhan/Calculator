@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./light.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
 </head>
 
 <body>
-
+    <audio id="buttonSound" src="/Assets/ui-click-43196.mp3" type="audio"></audio>
     <div class="container">
         <header class="header">
             <div style="margin-left: 5px;">
-                <a href=""> <i style="color: rgb(70, 68, 68);" class="fa fa-cog" aria-hidden="true"></i></a>
-                <a hre><i style="color: rgb(70, 68, 68);
-                margin-left: 5px;" class="fa-solid fa-lock"></i></a>
+                <a href="">
+                    <i style="color: rgb(70, 68, 68);" class="fa fa-cog" aria-hidden="true">
+                    </i></a>
+                <a hre>
+                    <i style="color: rgb(70, 68, 68);
+                margin-left: 5px;" class="fa-solid fa-lock"></i>
+                </a>
             </div>
             <div>
 
@@ -31,36 +35,36 @@
             </div>
         </header>
         <main class="main">
-            <input id='display' class="display" type="text" disabled>
+            <input id="display" class="display" type="text" disabled>
         </main>
         <section class="section">
-            <button onclick="clearDisplay()" class="AC">AC</button>
-            <button onclick="calculate()" class="equal">=</button>
+            <button onclick="AC(this.value)" value="AC" class="AC">AC</button>
+            <button onclick="solve()" class="equal">=</button>
         </section>
         <div class="buttons">
             <div class="row1">
-                <button value="7" onclick="appendToDisplay('7')" class="square  number">7</button>
-                <button value="8" onclick="appendToDisplay('8')" class="square  number">8</button>
-                <button value="9" onclick="appendToDisplay('9')" class="square  number">9</button>
-                <button value="/" onclick="appendToDisplay('/')" class="square operator">/</button>
+                <button onclick="display(this.value)" value="7" class="square  number">7</button>
+                <button onclick="display(this.value)" value="8" class="square  number">8</button>
+                <button onclick="display(this.value)" value="9" class="square  number">9</button>
+                <button onclick="display(this.value)" value="/" class="square operator">/</button>
             </div>
             <div class="row2">
-                <button value="4" onclick="appendToDisplay('4')" class="square number">4</button>
-                <button value="5" onclick="appendToDisplay('5')" class="square  number">5</button>
-                <button value="6" onclick="appendToDisplay('6')" class="square  number">6</button>
-                <button value="-" onclick="appendToDisplay('-')" class="square operator">-</button>
+                <button onclick="display(this.value)" value="4" class="square number">4</button>
+                <button onclick="display(this.value)" value="5" class="square  number">5</button>
+                <button onclick="display(this.value)" value="6" class="square  number">6</button>
+                <button onclick="display(this.value)" value="-" class="square operator">-</button>
             </div>
             <div class="row3">
-                <button value="1" onclick="appendToDisplay('1')" class="square  number">1</button>
-                <button value="2" onclick="appendToDisplay('2')" class="square  number">2</button>
-                <button value="3" onclick="appendToDisplay('3')" class="square  number">3</button>
-                <button value="x" onclick="appendToDisplay('x')" class="square operator">x</button>
+                <button onclick="display(this.value)" value="1" class="square  number">1</button>
+                <button onclick="display(this.value)" value="2" class="square  number">2</button>
+                <button onclick="display(this.value)" value="3" class="square  number">3</button>
+                <button onclick="display(this.value)" value="*" class="square operator">*</button>
             </div>
             <div class="row4">
-                <button value="." onclick="appendToDisplay('.')" class="square  number">.</button>
-                <button value="0" onclick="appendToDisplay('0')" class="square number">0</button>
-                <button value="Del" onclick="deleteLast()" class="square number del">Del</button>
-                <button value="+" onclick="appendToDisplay('+')" class="square operator">+</button>
+                <button onclick="display(this.value)" value="." class="square  number">.</button>
+                <button onclick="display(this.value)" value="0" class="square number">0</button>
+                <button onclick="del(value)" class="square number del">Del</button>
+                <button onclick="display(this.value)" value="+" class="square operator">+</button>
 
             </div>
         </div>
