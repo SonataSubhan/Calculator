@@ -1,6 +1,10 @@
 function display(value) {
 
     document.getElementById("display").value += value;
+
+    var audio = document.getElementById("buttonSound");
+    audio.play();
+
 }
 function AC(value) {
     document.getElementById("display").value = ""
@@ -30,15 +34,16 @@ function solve() {
         display.value = "Hata";
     }
 }
-// app.js
+
 document.getElementById('switch1').addEventListener('click', () => {
     let themeStylesheet = document.getElementById('themeStylesheet');
 
-    // Mövcud href-i yoxlayaraq temanı dəyiş
+
     if (themeStylesheet.getAttribute('href') === './light.css') {
         themeStylesheet.setAttribute('href', './dark.css');
     } else {
         themeStylesheet.setAttribute('href', './light.css');
     }
 });
+
 
