@@ -30,3 +30,15 @@ function solve() {
         display.value = "Hata";
     }
 }
+// app.js
+document.getElementById('switch1').addEventListener('click', () => {
+    let themeStylesheet = document.getElementById('themeStylesheet');
+
+    // Mövcud href-i yoxlayaraq temanı dəyiş
+    if (themeStylesheet.getAttribute('href') === './light.css') {
+        themeStylesheet.setAttribute('href', './dark.css');
+    } else {
+        themeStylesheet.setAttribute('href', './light.css');
+    }
+});
+
